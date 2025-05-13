@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Calendar Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <select id="languageSwitcher">
+      <option value="en">English</option>
+      <option value="ru">Русский</option>
+      <option value="kz">Қазақша</option>
+    </select>
+    <h1 id="title">English Calendar Game</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('info')">Info</button>
+    <button onclick="showSection('game')">Game</button>
+    <button onclick="showSection('review')">Review</button>
+  </nav>
+
+  <main>
+    <section id="info" class="section">
+      <div id="infoContent"></div>
+    </section>
+
+<img src="images/calendar.jpg" alt="Calendar">
+<img src="images/history.jpg" alt="History">
+
+    <section id="game" class="section" style="display:none;">
+      <div id="gameContent">
+        <div id="question"></div>
+        <div id="answers"></div>
+        <div id="timer"></div>
+        <div id="attempts"></div>
+        <button onclick="startGame()">Start Game</button>
+      </div>
+    </section>
+
+    <section id="review" class="section" style="display:none;">
+      <form id="reviewForm">
+        <textarea placeholder="Leave your feedback..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="reviewsList"></div>
+    </section>
+  </main>
+
+  <audio id="clickSound" src="sounds/click.wav"></audio>
+  <audio id="correctSound" src="sounds/correct.wav"></audio>
+  <audio id="wrongSound" src="sounds/wrong.wav"></audio>
+  <audio id="bgMusic" src="sounds/music.wav" autoplay loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
