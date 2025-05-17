@@ -136,19 +136,7 @@ const questions = [
 document.getElementById("languageSwitcher").addEventListener("change", (e) => {
   currentLanguage = e.target.value;
   updateLanguage();
-  function updateAIButtonText(lang) {
-  const aiButton = document.getElementById("aiButton");
-  if (!aiButton) return;
-
-  const labels = {
-    en: "🤖 AI Assistant about English Calendar",
-    ru: "🤖 ИИ-помощник по английскому календарю",
-    kz: "🤖 Ағылшын күнтізбесі туралы ЖИ көмекшісі"
-  };
-
-  aiButton.textContent = labels[lang] || labels.en;
-}
-  updateAIButtonText(currentLanguage); // 👈 Добавили
+});
 });
 });
 
