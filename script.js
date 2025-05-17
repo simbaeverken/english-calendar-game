@@ -24,7 +24,7 @@ Saturday: Saturn's day.<br>
 Sunday: Sun's day.<br>
 <br>This website was created by a 6th grade student — Symbaev Erken.<br><br>
 🤖 <a href="https://poe.com/BotKQ72NJ0B6N" target="_blank">Ask the AI bot about the calendar</a>`
-  },
+  },  
   ru: {
     title: "Игра: Английский календарь",
     info: `Каждый месяц и день недели в английском языке имеют исторические и мифологические корни.<br>
