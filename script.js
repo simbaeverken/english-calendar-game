@@ -137,8 +137,6 @@ document.getElementById("languageSwitcher").addEventListener("change", (e) => {
   currentLanguage = e.target.value;
   updateLanguage();
 });
-});
-});
 
 function updateLanguage() {
   document.getElementById("title").innerText = translations[currentLanguage].title;
@@ -209,9 +207,4 @@ function wrong() {
 
 document.getElementById("reviewForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  const text = e.target.querySelector("textarea").value;
-  const div = document.createElement("div");
-  div.innerText = text;
-  document.getElementById("reviewsList").appendChild(div);
-  e.target.reset();
-});
+  const text = e.target.querySelector
