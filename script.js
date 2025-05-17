@@ -25,7 +25,6 @@ Days of the week:
 - Sunday: Sun's day.
 
 Made by a 6th grade student from Timiryazev school.`,
-    studentNote: ""
   },
   ru: {
     title: "Игра: Английский календарь",
@@ -53,7 +52,6 @@ Made by a 6th grade student from Timiryazev school.`,
 - Воскресенье: день Солнца.
 
 Сайт создал ученик 6 класса Тимирязевской школы.`,
-    studentNote: ""
   },
   kz: {
     title: "Ағылшын күнтізбесі ойыны",
@@ -81,57 +79,10 @@ Made by a 6th grade student from Timiryazev school.`,
 - Жексенбі: Күн күні.
 
 Бұл сайтты Тимирязев мектебінің 6-сынып оқушысы жасады.`,
-    studentNote: ""
   }
 };
 
 let currentLanguage = "en";
-let questionIndex = 0;
-let attempts = 3;
-let timer;
-
-const questions = [
-  {
-    q: { en: "Who is January named after?", ru: "В честь кого назван January?", kz: "January кімнің құрметіне аталған?" },
-    answers: ["Janus", "Mars", "Saturn"], correct: 0
-  },
-  {
-    q: { en: "What does 'March' refer to?", ru: "'March' что означает?", kz: "'March' нені білдіреді?" },
-    answers: ["War god", "Love goddess", "Sun festival"], correct: 0
-  },
-  {
-    q: { en: "Which god is Thursday named after?", ru: "В честь какого бога назван Thursday?", kz: "Thursday қай құдайдың атымен аталған?" },
-    answers: ["Thor", "Odin", "Loki"], correct: 0
-  },
-  {
-    q: { en: "What is the origin of May?", ru: "Происхождение May?", kz: "May сөзі қайдан шыққан?" },
-    answers: ["Maia", "Mars", "Juno"], correct: 0
-  },
-  {
-    q: { en: "What planet is Saturday named after?", ru: "Saturday назван в честь какой планеты?", kz: "Saturday қай планетаның атымен?" },
-    answers: ["Saturn", "Jupiter", "Venus"], correct: 0
-  },
-  {
-    q: { en: "What does April mean?", ru: "Что означает April?", kz: "April нені білдіреді?" },
-    answers: ["To open", "To grow", "To shine"], correct: 0
-  },
-  {
-    q: { en: "Who is July named after?", ru: "July назван в честь кого?", kz: "July кімнің атымен аталған?" },
-    answers: ["Julius Caesar", "Juno", "Augustus"], correct: 0
-  },
-  {
-    q: { en: "What does September mean?", ru: "Что означает September?", kz: "September нені білдіреді?" },
-    answers: ["Seven", "Nine", "Ten"], correct: 0
-  },
-  {
-    q: { en: "Which day is named after the Moon?", ru: "Какой день назван в честь Луны?", kz: "Қай күн Айға арналған?" },
-    answers: ["Monday", "Tuesday", "Friday"], correct: 0
-  },
-  {
-    q: { en: "Which god is Wednesday named after?", ru: "В честь какого бога назван Wednesday?", kz: "Wednesday қай құдайдың атымен аталған?" },
-    answers: ["Odin", "Thor", "Freyja"], correct: 0
-  }
-];
 
 document.getElementById("languageSwitcher").addEventListener("change", (e) => {
   currentLanguage = e.target.value;
@@ -148,63 +99,5 @@ function showSection(sectionId) {
   document.getElementById(sectionId).style.display = "block";
 }
 
-function startGame() {
-  questionIndex = 0;
-  attempts = 3;
-  loadQuestion();
-}
-
-function loadQuestion() {
-  clearTimeout(timer);
-  const q = questions[questionIndex];
-  document.getElementById("question").innerText = q.q[currentLanguage];
-  const answersDiv = document.getElementById("answers");
-  answersDiv.innerHTML = "";
-  q.answers.forEach((a, i) => {
-    const btn = document.createElement("button");
-    btn.innerText = a;
-    btn.onclick = () => checkAnswer(i);
-    btn.onmousedown = () => document.getElementById("clickSound").play();
-    answersDiv.appendChild(btn);
-  });
-  document.getElementById("attempts").innerText = `Attempts: ${attempts}`;
-  let timeLeft = 30;
-  document.getElementById("timer").innerText = `Time: ${timeLeft}s`;
-  timer = setInterval(() => {
-    timeLeft--;
-    document.getElementById("timer").innerText = `Time: ${timeLeft}s`;
-    if (timeLeft === 0) {
-      clearInterval(timer);
-      wrong();
-    }
-  }, 1000);
-}
-
-function checkAnswer(index) {
-  const q = questions[questionIndex];
-  if (index === q.correct) {
-    document.getElementById("correctSound").play();
-    questionIndex++;
-    if (questionIndex < questions.length) {
-      loadQuestion();
-    } else {
-      alert("You completed all levels!");
-    }
-  } else {
-    wrong();
-  }
-}
-
-function wrong() {
-  document.getElementById("wrongSound").play();
-  attempts--;
-  if (attempts <= 0) {
-    alert("Game Over!");
-  } else {
-    loadQuestion();
-  }
-}
-
-document.getElementById("reviewForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const text = e.target.querySelector
+updateLanguage();
+showSection("info");
