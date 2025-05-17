@@ -23,6 +23,7 @@ Days of the week:
 - Friday: Freya's day.
 - Saturday: Saturn's day.
 - Sunday: Sun's day.
+An AI assistant that helps you understand the English calendar better: https://poe.com/BotKQ72NJ0B6N
 
 Made by a 6th grade student from Timiryazev school.`,
     studentNote: ""
@@ -51,6 +52,8 @@ Made by a 6th grade student from Timiryazev school.`,
 - Пятница: день Фрейи.
 - Суббота: день Сатурна.
 - Воскресенье: день Солнца.
+Помощник с искусственным интеллектом, помогающий больше понять английский календарь:
+https://poe.com/BotKQ72NJ0B6N
 
 Сайт создал ученик 6 класса Тимирязевской школы.`,
     studentNote: ""
@@ -79,6 +82,7 @@ Made by a 6th grade student from Timiryazev school.`,
 - Жұма: Фрейя күні.
 - Сенбі: Сатурн күні.
 - Жексенбі: Күн күні.
+Ағылшын күнтізбесін жақсырақ түсінуге көмектесетін AI көмекшісі: https://poe.com/BotKQ72NJ0B6N
 
 Бұл сайтты Тимирязев мектебінің 6-сынып оқушысы жасады.`,
     studentNote: ""
