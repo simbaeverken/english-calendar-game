@@ -23,7 +23,7 @@ Friday: Freya's day.<br>
 Saturday: Saturn's day.<br>
 Sunday: Sun's day.<br>
 <br>This website was created by a 6th grade student — Symbaev Erken.<br><br>
-🤖 <a href="https://poe.com/BotKQ72NJ0B6N" target="_blank">Ask the AI bot about the calendar</a>`
+🤖 <a href="https://poe.com/AI-helper-calendar" target="_blank">Ask the AI bot about the calendar</a>`
   },  
   ru: {
     title: "Игра: Английский календарь",
@@ -49,7 +49,7 @@ Sunday: Sun's day.<br>
 Суббота: день Сатурна.<br>
 Воскресенье: день Солнца.<br>
 <br>Этот сайт создал ученик 6 класса — Симбаев Еркен.<br><br>
-🤖 <a href="https://poe.com/BotKQ72NJ0B6N" target="_blank">Спроси у ИИ-бота про календарь</a>`
+🤖 <a href="https://poe.com/AI-helper-calendar" target="_blank">Спроси у ИИ-бота про календарь</a>`
   },
   kz: {
     title: "Ағылшын күнтізбесі ойыны",
@@ -75,7 +75,7 @@ Sunday: Sun's day.<br>
 Сенбі: Сатурн күні.<br>
 Жексенбі: Күн күні.<br>
 <br>Бұл сайтты 6-сынып оқушысы — Симбаев Еркен жасады.<br><br>
-🤖 <a href="https://poe.com/BotKQ72NJ0B6N" target="_blank">AI боттан күнтізбе жайлы сұра</a>`
+🤖 <a href="https://poe.com/AI-helper-calendar" target="_blank">AI боттан күнтізбе жайлы сұра</a>`
   }
 };
 let currentLanguage = "en";
